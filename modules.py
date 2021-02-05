@@ -48,7 +48,9 @@ class sensor():
         self.GPIO = GPIO
         GPIO.setup(self.trig, GPIO.OUT)
         GPIO.setup(self.echo, GPIO.IN)
-        
+        GPIO.setup(self.edho, PWM8)
+
+
         #function for determining distance
     def get_dist(self, time):
         #pulse trigger
