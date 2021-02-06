@@ -15,14 +15,16 @@ class motor():
         self.dir = 0 #dirction of the motor
         
         GPIO.setup(self.in_1, GPIO.OUT)
-        GPIO.setup(self.in_2, GPIO.OUT)
+        GPIO.setup(self.in_2, GPIO.OUT) //GPIO 3
         GPIO.setup(self.pwm_pin, GPIO.OUT) #set up pins for output
         self.pmw = GPIO.PWM(self.pwm_pin, 1000) #set up pwm pin
      
         GPIO.output(self.in_1, GPIO.HIGH) #initial state is stoped
         GPIO.output(self.in_2, GPIO.HIGH)
         self.pmw.start(12.5)  #THIS IS USED TO CONTORL SPEED! higher value = faster
-        
+
+
+
     #direction functions    
     def forward(self): 
         self.GPIO.output(self.in_1, self.GPIO.LOW)
