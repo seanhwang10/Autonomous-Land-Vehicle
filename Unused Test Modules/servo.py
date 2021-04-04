@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-import time
+import time 
 
 pmwPin = 18
 speed = 50
